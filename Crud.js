@@ -53,7 +53,7 @@ window.deleteUser = async (id) => {
     users = await api.get("users", {}, {}, false);
   } catch (err) {
     console.log(err);
-    alert("Error fetching users");
+    console.log("Error fetching users");
   }
   users = users.filter((user) => user.id !== id);
   const totalPages = Math.ceil(users.length / SIZE);
@@ -73,7 +73,7 @@ window.addUser = async () => {
     users = await api.get("users", {}, {}, false);
   } catch (err) {
     console.log(err);
-    alert("Error fetching users");
+    console.log("Error fetching users");
   }
   let name = document.getElementById("name");
   if (ID) {
@@ -103,7 +103,7 @@ window.editUser = async (id) => {
     users = await api.get("users", {}, {}, false);
   } catch (err) {
     console.log(err);
-    alert("Error fetching users");
+    console.log("Error fetching users");
   }
   ID = id;
   let name = document.getElementById("name");
@@ -178,7 +178,7 @@ const main = async () => {
     users = await api.get("users");
   } catch (err) {
     console.log(err);
-    alert("Error fetching users");
+    console.log("Error fetching users");
   }
   setUsers(users);
 };
