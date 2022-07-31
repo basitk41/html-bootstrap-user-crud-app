@@ -88,7 +88,7 @@ window.addUser = async () => {
     const totalPages = Math.ceil(users.length / SIZE);
     PAGE = totalPages;
     SORT = "id",
-  ORDER = "asc";
+  ORDER = "desc";
   }
   setData("users", users);
   window.search(true)
