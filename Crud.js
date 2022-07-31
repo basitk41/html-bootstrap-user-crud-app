@@ -89,7 +89,7 @@ window.addUser = async () => {
     PAGE = totalPages;
   }
   setData("users", users);
-  setUsers(users);
+  window.search(true)
 };
 
 // editing user
